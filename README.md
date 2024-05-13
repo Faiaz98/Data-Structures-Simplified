@@ -11,12 +11,46 @@ This repository aims to make data structures more simplified and easy to underst
 - Linked Lists
 - Stacks
 - Queue
+- Hash Tables (can be considered linear when considering separate chaining or linear probing 
+  collision resolution).
+- Strings (can be considered as linear sequence of characters)
+- Vectors (in certain programming languages like C++)
 
 ## Non-Linear Data Structures
-- Trees
-- Graphs
-- Hash Tables
-- Heaps
+- Trees:
+      - Binary Trees
+      - Binary Search Trees
+      - AVL Trees
+      - B-Trees
+      - Red-Black Trees
+      - Trie Trees
+      - Splay Trees
+      - Segment Trees
+      - Fenwick Trees (Binary Indexed Trees)
+- Graphs:
+      - Directed Graphs
+      - Undirected Graphs
+      - Weighted Graphs
+      - Acyclic Graphs (DAGs)
+      - Bipartite Graphs
+      - Complete Graphs
+      - Sparse Graphs
+      - Dense Graphs
+      = Connectivity Graphs
+- Heaps:
+      - Binary Heaps (Min-Heap, Max-Heap)
+      - Fibonacci Heaps
+- Hash Maps (also known as Hash Tables):
+      - Sperate Chaining Hash Tables
+      - Linear Probing Hash Tables
+      - Quadric Probing Hash Tables
+      - Double Hashing
+- Graphical Models:
+      - Spatial Trees (Quad Trees, Oct Trees)
+      - KD-Trees (K-Dimensional Trees)
+      - R-Trees (Rectangular or Region Trees)
+      - Bounding Volume Hierarchies (BVH)
+
 
 ## Arrays Simplified:
 
