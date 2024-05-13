@@ -41,3 +41,15 @@ Let's say you have an array of numbers: `[3, 8, 12, 5, 9]`.
 - Index 2: 12
 - Index 3: 5
 - Index 4: 9
+
+You can access the numbers by specifying their index, like `array[2]` to get `12`.
+
+## Common Operations:
+- Access: Get the value at a specific index.
+- Insertion: Add a new item at a particular position.
+- Deletion: Remove an item from a specific position.
+- Update: Change the value at a certain index.
+
+## Usage:
+
+Array are used in various algorithms, data storage, and representing mathematical concepts.
