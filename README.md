@@ -86,11 +86,52 @@ Imagine a chain of connected blocks. Each block holds a piece of information and
 
 ## Common Operations: 
 
-- Insertion: Add a new node at the beginning, end, or middle of the list.
-- Deletion: Remove a node from the list.
-- Traversal: Visit each node in the list sequentially.
-- Search: Look for a specific node in the list.
+- **Insertion**: Add a new node at the beginning, end, or middle of the list.
+- **Deletion**: Remove a node from the list.
+- **Traversal**: Visit each node in the list sequentially.
+- **Search**: Look for a specific node in the list.
 
 ## Usage:
 
 Linked lists are used in situations where dynamic size and efficient insertion and deletion operations are required, such as implementing stacks, queues, and hash tables.
+
+## Stacks Simplified:
+
+Imagine a stack of books where you can only add or remove books from the top. That's what a 
+stack is like in programming.
+
+## Key Points:
+
+- **LIFO(Last In, First Out)**: The last item added to the stack is the first one to be removed.    It's like a stack of plates where you take the top one first.
+- **Operations**: Stacks support two main operations:
+      - **Push**: Add an item to the top of the stack.
+      - **Pop**: Remove the item from the top of the stack.
+
+- **Types**:
+      
+    - **Array-based Stack**: Implement using arrays, providing fast access but with a fixed size.
+    - **Linked List-based Stack**: Implement using linked lists, allowing dynamic size but 
+      slightly slower access.
+
+## Example:
+
+- Array-based Stack: imagine a stack `[5, 8, 12]`. If you push 3 onto the stack, it becomes
+  `[5, 8, 12, 3]`. If you pop, you'll get 3 removed from the top.
+
+- Linked List-based Stack: Imagine a stack with elements A->B->C. If you push D onto the stack,
+  it becomes D->A->B->C. If you pop, you'll get D removed from the top.
+
+
+## Common Operations:
+
+- Push: Add an item to the top of the stack.
+- Pop: Remove the item from the top of the stack.
+- Peek: View the item at the top of the stack without removing it.
+- Check Empty: Determine if the stack is empty.
+- Check Full (for array-based stacks): Determine if the stack is full.
+
+## Usage:
+
+Stacks are used in various algorithms and applications, such as managing functions calls in 
+programming language, implementing undo functionality in text editors, and parsing expressions
+in compilers.
