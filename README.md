@@ -82,4 +82,15 @@ Imagine a chain of connected blocks. Each block holds a piece of information and
   a letter and pointers to both the next and previous nodes.
 - Circular Linked List: In `[A -> B -> C -> D -> A]`, each element (A, B, C, D) is a node   
   containing a letter and a pointer to the next node, with the last node pointing back to the
-  first one. 
+  first one.
+
+## Common Operations: 
+
+- Insertion: Add a new node at the beginning, end, or middle of the list.
+- Deletion: Remove a node from the list.
+- Traversal: Visit each node in the list sequentially.
+- Search: Look for a specific node in the list.
+
+## Usage:
+
+Linked lists are used in situations where dynamic size and efficient insertion and deletion operations are required, such as implementing stacks, queues, and hash tables.
