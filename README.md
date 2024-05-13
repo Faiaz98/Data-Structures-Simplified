@@ -156,3 +156,26 @@ is the first one to get on the ride. That's what a queue is like in programming.
 - Array-based Queue: Implemented using arrays, providing fast access but with a fixed size.
 - Linked-List Queue: Implemented using linked lists, allowing dynamic size but with slightly
   slower access.
+
+
+## Examples:
+
+- Array-based Queue: Imagine a queue `[5, 8, 12]`. If you enqueue 3 into the queue, it becomes
+  `[5, 8, 12, 3]`. If you dequeue, you'll get 5 removed from the front.
+- Linked List-based Queue: Imagine a queue with elements A->B->C. If you enqueue D into the queue,
+  it becomes A->B->C->D. If you dequeue, you'll get A removed from the front.
+
+
+## Common Operations:
+
+- Enqueue: Add an item to the back of the queue.
+- Dequeue: Remove the item from the front of the queue.
+- Peek: View the item at the front of the queue without removing it.
+- Check Empty: Determine if the queue is empty.
+- Check Full(for array-based queues): Determine if the queue is full.
+
+
+## Usage:
+
+Queues are used in various scenarios, such as managing tasks in a computer operating system(e.g.,
+CPU scheduling), handling requests in network protocols, and implementing breadth-first search in graph algorithms.
