@@ -53,3 +53,21 @@ You can access the numbers by specifying their index, like `array[2]` to get `12
 ## Usage:
 
 Array are used in various algorithms, data storage, and representing mathematical concepts.
+
+
+
+## Linked List Simplified:
+
+Imagine a chain of connected blocks. Each block holds a piece of information and points to the next block in the chain, forming a sequence. That's what a linked list is like.
+
+## Key Points:
+
+- Nodes: Each block in the linked list is called a "node". It contains both data and a reference
+  (or pointer) to the next node in the sequence.
+- Dynamic Size: Unlike arrays, linked lists can grow or shrink dynamically because each node points
+  to the next one,
+- No Contiguous Memory: Nodes can be scattered in memory, not necessarily next to each other.
+- Types:
+     - Singly Linked Lists: Each node points to the next one in the sequence. It's like a chain
+       where you can only move forward.
+     - Doubly Linked Lists: 
