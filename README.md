@@ -70,4 +70,16 @@ Imagine a chain of connected blocks. Each block holds a piece of information and
 - Types:
      - Singly Linked Lists: Each node points to the next one in the sequence. It's like a chain
        where you can only move forward.
-     - Doubly Linked Lists: 
+     - Doubly Linked Lists: Each node points to both the next and previous nodes. It's like a path
+       with signs pointing both forward and backward.
+     - Circular Linked Lists: The last node points back to the first one, forming a loop, it's like
+       a loop where you can keep going around and around.
+
+## Examples:
+
+- Singly Linked List: In `[A -> B -> C -> D]`, each element (A, B, C, D) is a node containing a      letter and a pointer to the next node.
+- Doubly Linked List: In `[A <-> B <-> C <-> D]`, each element (A, B, C, D) is a node containing
+  a letter and pointers to both the next and previous nodes.
+- Circular Linked List: In `[A -> B -> C -> D -> A]`, each element (A, B, C, D) is a node   
+  containing a letter and a pointer to the next node, with the last node pointing back to the
+  first one. 
