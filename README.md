@@ -7,7 +7,7 @@ This repository aims to make data structures more simplified and easy to underst
 - Non-Linear Data Structures
 
 ## Linear Data Structures
-- Array
+- Arrays
 - Linked Lists
 - Stacks
 - Queue
@@ -17,3 +17,27 @@ This repository aims to make data structures more simplified and easy to underst
 - Graphs
 - Hash Tables
 - Heaps
+
+## Arrays Simplified:
+
+An array is like a row of boxes where you can store items. Each box has a number called an index. Think of it as a line of mailboxes in an apartment building.
+
+## Key Points:
+
+- Fixed Size: Arrays have a fixed size, meaning you decide how many boxes (or elements) there will
+  be when you create it.
+- Indexed: Each box in the array has an index starting from 0. This helps you find and access items
+  quickly.
+- Homogeneous: All the items in an array must be of the same data types, like all letters,     
+  numbers, or objects.
+- Contiguous Memory: The items are stored one after another in memory, which allows for fast 
+  access to any element using its index.
+
+## Example:
+
+Let's say you have an array of numbers: `[3, 8, 12, 5, 9]`.
+- Index 0: 3
+- Index 1: 8
+- Index 2: 12
+- Index 3: 5
+- Index 4: 9
