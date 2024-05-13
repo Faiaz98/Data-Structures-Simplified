@@ -132,6 +132,27 @@ stack is like in programming.
 
 ## Usage:
 
-Stacks are used in various algorithms and applications, such as managing functions calls in 
+Stacks are used in various algorithms and applications, such as managing function calls in 
 programming language, implementing undo functionality in text editors, and parsing expressions
 in compilers.
+
+
+
+## Queues Simplified:
+
+Imagine a line of people waiting for a roller coaster ride. The person who gets in line first
+is the first one to get on the ride. That's what a queue is like in programming.
+
+## Key Points:
+
+- FIFO(First In, First Out); the first item added to the queue is the first one to be removed.
+  It's like waiting in line at a grocery store.
+- Operations: Queues support two main operations:
+      - Enqueue: Add an item to the back of the queue.
+      - Dequeue: Remove the item from the front of the queue.
+
+## Types:
+
+- Array-based Queue: Implemented using arrays, providing fast access but with a fixed size.
+- Linked-List Queue: Implemented using linked lists, allowing dynamic size but with slightly
+  slower access.
