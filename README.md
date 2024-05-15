@@ -227,4 +227,18 @@ the search quick and efficient. That's what a hash table is like.
   Each key is unique and is associated with a corresponding value.
 
 - Hash Function: It uses a hash function to compute an index(or "hash) for
-  each key. This index determines
+  each key. This index determines where the key-value pair will be stored
+  in the underlying array.
+
+- Fast Access: Retrieving, inserting, or deleting data from a hash table is
+  fast, typically with constant time complexity on average (O(1)).
+
+- Collision Handling: Since multiple keys may hash to the same 
+  index(collision), hash tables emply collision resolution techniques
+  to handle such cases efficiently.
+
+- Dynamic Size: Hash tables can dynamically resize themselves to accommodate
+  more key-value pairs as needed, allowing for efficient memory usage.
+
+
+##
