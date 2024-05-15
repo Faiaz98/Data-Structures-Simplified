@@ -234,11 +234,28 @@ the search quick and efficient. That's what a hash table is like.
   fast, typically with constant time complexity on average (O(1)).
 
 - Collision Handling: Since multiple keys may hash to the same 
-  index(collision), hash tables emply collision resolution techniques
+  index(collision), hash tables employ collision resolution techniques
   to handle such cases efficiently.
 
 - Dynamic Size: Hash tables can dynamically resize themselves to accommodate
   more key-value pairs as needed, allowing for efficient memory usage.
 
 
-##
+## Examples:
+
+Suppose you have a hash table storing employee information, where the 
+employee ID is the key and the corresponding details (name, department, etc.) are the values. Using a hash function, each employee ID is mapped 
+to a specific index in the hash table, making retrieval of employee details
+fast.
+
+## Common Operation:
+
+- Insertion: Add a new key-value pair to the hash table.
+- Retrieval: Retrieve the value associated with a given key.
+- Deletion: Remove a key-value pair from the hash table.
+- Update: Modify the value associated with a given key.
+- Search: Check if a key exists in the hash table.
+
+## Usage: 
+
+Hash tables are widely used in various applications, including database indexing, caching mechanisms, symbol tables in compilers, implementing associative arrays in programming languages, and storing data in hash-based data structres like sets and maps.
