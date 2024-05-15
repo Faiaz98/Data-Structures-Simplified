@@ -213,3 +213,18 @@ is the first one to get on the ride. That's what a queue is like in programming.
 
 Queues are used in various scenarios, such as managing tasks in a computer operating system(e.g.,
 CPU scheduling), handling requests in network protocols, and implementing breadth-first search in graph algorithms.
+
+
+
+## Hash Tables Simplified:
+
+Imagine a library where each book has a unique code, and there are shelves labeled with those codes. When you want to find a book, you go directly to the shelf labeled with its code, making
+the search quick and efficient. That's what a hash table is like.
+
+## Key Points:
+
+- Key-Value Pairs: A hash table stores data in the form of key-value pairs.
+  Each key is unique and is associated with a corresponding value.
+
+- Hash Function: It uses a hash function to compute an index(or "hash) for
+  each key. This index determines
