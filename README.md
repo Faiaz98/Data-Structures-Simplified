@@ -352,3 +352,44 @@ int main() {
 
 Vectors are commonly used in C++ and other programming languages for situations where the size of the data structure may change frequently, such as storing a dynamic list of elements, implementing dynamic arrays, and as a more flexible alternative to static arrays.
 
+
+## Deques Simplified:
+
+A deque (pronounced "deck") is a data structure that allows adding and removing elements from both ends, making it versatile for various applications. Think of it as a double-ended line of people where you can add or remove people from either the front or the back.
+
+## Key Points:
+
+- Double-Ended Operations: You can insert and delete elements from both the front and the back of the deque.
+- Dynamic Size: Deque can grow or shrink dynamically as needed.
+- Indexed Access: Elements in a deque can be accessed by their index, similar to arrays and vectors.
+- Flexible Use: Deques can function as both stacks (LIFO) and queues (FIFO) due to their ability to operate on both ends.
+
+## Example:
+
+In a deque `[A, B, C, D]`, you can perform the following operations:
+
+- Add to the front: `addFront(E)` results in `[E, A, B, C, D]`
+- Add to the back: `addBack(F)` results in `[A, B, C, D, F]`
+- Remove from the front: `removeFront()` results in `[B, C, D]`
+- Remove from the back: `removeBack()` results in `[A, B, C]`
+
+## Common Operations:
+
+- addFront(item): Add an item to the front of the deque.
+- addBack(item): Add an item to the back of the deque.
+- removeFront(): Remove and return the item from the front of the deque.
+- removeBack(): Remove and return the item from the back of the deque.
+- peekFront(): View the item at the front without removing it.
+- peekBack(): View the item at the back without removing it.
+- isEmpty(): Check if the deque is empty.
+- size(): Get the number of items in the deque.
+
+
+## Usage:
+
+Deques are used in various applications such as:
+
+- Implementing both stacks and queues.
+- Sliding window problems.
+- Managing lists of tasks or jobs where both ends need to be processed.
+- Caching algorithms like the Least Recently Used (LRU) cache.
