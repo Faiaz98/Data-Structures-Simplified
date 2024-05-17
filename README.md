@@ -393,3 +393,27 @@ Deques are used in various applications such as:
 - Sliding window problems.
 - Managing lists of tasks or jobs where both ends need to be processed.
 - Caching algorithms like the Least Recently Used (LRU) cache.
+
+
+## Example in Python:
+
+```bash
+from collections import deque
+
+#create a deque
+d = deque()
+
+#Add elements to the deque
+d.append('A')   # Add to the back
+d.appendleft('B') # Add to the front
+d.append('C') # Add to the back
+
+print("Deque after additions: ", d)
+
+#Remove elements from the deque
+d.pop()  #remove from the back
+d.popleft() #remove from the front
+
+print("Deque after removals: ", d)
+
+```
