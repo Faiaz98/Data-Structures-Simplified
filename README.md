@@ -417,3 +417,71 @@ d.popleft() #remove from the front
 print("Deque after removals: ", d)
 
 ```
+
+## Non-Linear Data Structures
+
+## Trees Simplified
+
+Imagine an organizational chart of a company, with the CEO at the top and managers, employees, and interns below in a hierarchical structure. That's what a tree is like in computer science.
+
+## Key Points:
+
+1. Hierarchy: Trees represent a hierarchy with nodes connected in a parent-child relation.
+2. Root: The topmost node in a tree is called the root.
+3. Nodes: Each element in the tree is called a node.
+4. Edges: The connections between nodes are called edges.
+5. Leaf Nodes: Nodes without children are called leaf nodes.
+6. Subtrees: A node and all its descendants form a subtree.
+7. Depth and Height: The depth of a node is the number of edges from the root to the node. The height of a node is the number of edges on the longest path from the node to a leaf.
+
+**Common Type of Tree:**
+
+**1. Binary Trees:**
+   -Each node has at most two children, referred to as the left child and the right child.
+
+
+**Example:**
+
+```plaintext
+       A
+      / \
+     B   C
+    / \
+   D   E
+```
+
+**Explanation:**
+
+- Root: A
+- Left child of A: B
+- Right child of B: C
+- Left child of B: D
+- Right child of B: E
+
+**Common Operations:**
+- Insertion
+- Deletion
+- Traversal (in-order, pre-order, post-order)
+
+**2. Binary Search Tree(BST):**
+  - A binary tree where the left subtree contains nodes with values less than the parent node, and the right subtree contains nodes with values greater that the parent node.
+
+
+**Example of a Binary Search Tree (BST):**
+
+```plaintext
+       8
+      / \
+     3   10
+    / \    \
+   1   6    14
+      / \   /
+     4   7 13
+````
+
+Common Operations:
+
+- Insertion: Add a node to the tree while maintaining the tree's properties.
+- Deletion: Remove a node from the tree while maintaining the tree's properties.
+- Traversal: Visit all the nodes in a specific order (e.g., in-order, pre-order, post-order, level-order).
+- Search: Find a node in the tree.
