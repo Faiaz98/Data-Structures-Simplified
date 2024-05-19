@@ -485,3 +485,48 @@ Common Operations:
 - Deletion: Remove a node from the tree while maintaining the tree's properties.
 - Traversal: Visit all the nodes in a specific order (e.g., in-order, pre-order, post-order, level-order).
 - Search: Find a node in the tree.
+
+
+**3. AVL Trees:**
+  - A self-balanced binary search tree where the difference in heights between the left and right subtrees of any nodes is at most one.
+
+**Example:**
+
+```plaintext
+       30
+      /  \
+     20   40
+    /  \
+   10  25
+```
+
+**Explanation:**
+
+- A balanced BST where the heights of the left and right subtrees of any node differ by at most one.
+- Self-balancing ensures O(log n) time complexity for insertion, deletions, and lookups.
+
+**Common Operations:**
+
+- Rotations(left and right) to maintain balance.
+- Insert, delete, search with balancing.
+
+## 4. B-Trees:
+
+- A balanced tree data structure commonly used in databases and file systems, where each node can have multiple children.
+
+
+```plaintext
+       [10, 20]
+      /   |    \
+  [5, 7] [15, 17] [25, 30]
+```
+
+**Explanation:**
+
+- Multi-way tree used in databases and file systems.
+- Each node can contain multiple keys and have multiple children.
+
+**Common Operations:**
+
+- Insert, delete, and search with balancing.
+- Nodes split when they exceed maximum capacity.
