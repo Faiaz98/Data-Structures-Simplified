@@ -530,3 +530,109 @@ Common Operations:
 
 - Insert, delete, and search with balancing.
 - Nodes split when they exceed maximum capacity.
+
+
+## 5. Red-Black Trees:
+
+- A self-balancing binary search tree where each node contains an extra bit for denoting the color of the node, either red or black.
+
+**Example:**
+
+```plaintext
+       10 (Black)
+      /    \
+   5 (Red)  15 (Black)
+  /  \
+3 (Black)  7 (Black)
+```
+
+**Explanation:**
+
+- Self-balancing BST with nodes colored red or black.
+- Ensures balance with rules to maintain properties (e.g., red nodes cannot have red children).
+
+**Common Operations:**
+
+- Insert, delete with rotations and color flips to maintain balance.
+- Search efficiently in O(log n) time.
+
+
+## 6. Trie Trees (Prefix Trees):
+
+- A tree-like data structure used for storing a dynamic set of strings where the keys are usually strings.
+
+**Example:**
+
+```plaintext
+            root
+           /  |  \
+          t   b   c
+         /   / \   \
+        r   a   y   a
+       /     \
+      i       n
+     /         \
+    e           a
+```
+
+**Explanation:**
+
+- Tree used to store strings, with each node representing a character.
+- Efficient for prefix searches (e.g., autocomplete).
+
+**Common Operations:**
+
+- Insert, search, and delete words.
+- Efficiently finds all words with a given prefix.
+
+
+## 7. Segment Trees
+
+- A tree used for storing intervals or segments, and allows querying which segments overlap with a given point or interval.
+
+**Example:**
+For an array [1, 3, 5, 7, 9, 11]:
+
+```plaintext
+                   [36]
+                  /    \
+             [16]      [20]
+            /   \      /   \
+          [4]  [12] [16]  [4]
+         / \   / \   / \
+       [1][3] [5][7] [9][11]
+```
+
+**Explanation:**
+
+- Used for range queries and updates.
+- Each node represents a segment (range) of the array.
+
+**Common Operations:**
+
+- Build: Construct the tree from an array.
+- Query: Find the sum/min/max in a range.
+- Update: Modify elements and update the tree.
+
+## 8. Fenwick Trees (Binary Indexed Trees):
+
+- A data structure that provides efficient methods for cumulative frequency tables or cumulative sums.
+  
+**Example:**
+
+For an array [1, 7, 3, 0, 7, 8, 3, 2, 6, 2]:
+
+```plaintext
+  Index:   1  2  3  4  5  6  7  8  9 10
+  BIT:    [1, 8, 3, 11, 7, 15, 3, 39, 6, 8]
+```
+
+**Explanation:**
+
+- Used for cumulative frequency tables or sums.
+- Efficient updates and prefix queries.
+
+**Common Operations:**
+
+- Update: Add a value to an element.
+- Query: Get the prefix sum up to a certain index.
