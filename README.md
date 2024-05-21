@@ -636,3 +636,13 @@ For an array [1, 7, 3, 0, 7, 8, 3, 2, 6, 2]:
 
 - Update: Add a value to an element.
 - Query: Get the prefix sum up to a certain index.
+
+
+## Graph Simplified:
+
+Imagine a map of cities connected by roads. Each city is a node, and each road connecting the cities is an edge. That's what a graph is like in Computer science.
+
+**Key Points:**
+
+- Vertices (Nodes): The points in a graph.
+- Edges: The connections between the vertices.
