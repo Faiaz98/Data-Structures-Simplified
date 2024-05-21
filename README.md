@@ -933,3 +933,246 @@ Imagine a binary tree where the highest (or lowest) priority element is always t
 
 ## Key Points:
 
+- **Binary Heap**: A complete binary tree where each parent node is either greater than or equal to (max-heap) or less than or equal to (min-heap) its children.
+- **Heap Property**: In a max heap, the key at the parent node is greater than or equal to the keys of its children, and the highest key is at the root. In a min heap, the key at the parent node is less than or equal to the keys of its children, and the lowest key is at the root.
+- **Complete Binary Tree**: All levels of the tree are fully filled except possibly for the last level which is filled from left to right.
+
+
+
+## Types of Heaps:
+
+**1. Max Heap**
+
+**Example:**
+
+```plaintext
+       10
+      /  \
+     9    8
+    / \  / \
+   7  6 5  4
+```
+
+**Explanation:**
+
+- The root node has the highest value.
+- Every parent node is greater than or equal to its children.
+
+
+**Common Operation:**
+
+- Insertion: Add the new element at the end and then heapify up.
+- Deletion (Extract Max): Remove the root and replace it with the last element, then heapify down.
+- Heapify: Adjust the heap to maintain the heap property.
+
+
+**Example for Max Heap:**
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class MaxHeap {
+private:
+    std::vector<int> heap;
+
+    void heapifyUp(int index) {
+        if (index && heap[parent(index)] < heap[index]) {
+            std::swap(heap[index], heap[parent(index)]);
+            heapifyUp(parent(index));
+        }
+    }
+
+    void heapifyDown(int index) {
+        int left = leftChild(index);
+        int right = rightChild(index);
+        int largest = index;
+
+        if (left < size() && heap[left] > heap[largest])
+            largest = left;
+        if (right < size() && heap[right] > heap[largest])
+            largest = right;
+
+        if (largest != index) {
+            std::swap(heap[index], heap[largest]);
+            heapifyDown(largest);
+        }
+    }
+
+    int parent(int i) { return (i - 1) / 2; }
+    int leftChild(int i) { return (2 * i + 1); }
+    int rightChild(int i) { return (2 * i + 2); }
+
+public:
+    int size() { return heap.size(); }
+    bool empty() { return size() == 0; }
+
+    void insert(int key) {
+        heap.push_back(key);
+        int index = size() - 1;
+        heapifyUp(index);
+    }
+
+    void removeMax() {
+        if (size()) {
+            heap[0] = heap.back();
+            heap.pop_back();
+            heapifyDown(0);
+        }
+    }
+
+    int getMax() {
+        if (size()) return heap.front();
+        return -1; // or some error value
+    }
+
+    void printHeap() {
+        for (int i : heap) {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+    }
+};
+
+int main() {
+    MaxHeap maxHeap;
+    maxHeap.insert(10);
+    maxHeap.insert(9);
+    maxHeap.insert(8);
+    maxHeap.insert(7);
+    maxHeap.insert(6);
+    maxHeap.insert(5);
+    maxHeap.insert(4);
+
+    std::cout << "Max Heap:" << std::endl;
+    maxHeap.printHeap();
+
+    std::cout << "Maximum value: " << maxHeap.getMax() << std::endl;
+
+    maxHeap.removeMax();
+    std::cout << "After removing max:" << std::endl;
+    maxHeap.printHeap();
+
+    return 0;
+}
+```
+
+## 2. Min heap
+
+**Example:**
+
+```plaintext
+       4
+      /  \
+     5    8
+    / \  / \
+   6  7 9  10
+```
+
+**Explanation:**
+
+- The root node has the lowest value.
+- Every parent node is less than or equal to its children.
+
+
+**Common Operations:**
+
+- Insertion: Add the new element at the end and then heapify up.
+- Deletion (Extract Min): Remove the root and replace it with the last element, then heapify down.
+- Heapify: Adjust the heap to maintain the heap property.
+
+
+**Example for Min heap:**
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class MinHeap {
+private:
+    std::vector<int> heap;
+
+    void heapifyUp(int index) {
+        if (index && heap[parent(index)] > heap[index]) {
+            std::swap(heap[index], heap[parent(index)]);
+            heapifyUp(parent(index));
+        }
+    }
+
+    void heapifyDown(int index) {
+        int left = leftChild(index);
+        int right = rightChild(index);
+        int smallest = index;
+
+        if (left < size() && heap[left] < heap[smallest])
+            smallest = left;
+        if (right < size() && heap[right] < heap[smallest])
+            smallest = right;
+
+        if (smallest != index) {
+            std::swap(heap[index], heap[smallest]);
+            heapifyDown(smallest);
+        }
+    }
+
+    int parent(int i) { return (i - 1) / 2; }
+    int leftChild(int i) { return (2 * i + 1); }
+    int rightChild(int i) { return (2 * i + 2); }
+
+public:
+    int size() { return heap.size(); }
+    bool empty() { return size() == 0; }
+
+    void insert(int key) {
+        heap.push_back(key);
+        int index = size() - 1;
+        heapifyUp(index);
+    }
+
+    void removeMin() {
+        if (size()) {
+            heap[0] = heap.back();
+            heap.pop_back();
+            heapifyDown(0);
+        }
+    }
+
+    int getMin() {
+        if (size()) return heap.front();
+        return -1; // or some error value
+    }
+
+    void printHeap() {
+        for (int i : heap) {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+    }
+};
+
+int main() {
+    MinHeap minHeap;
+    minHeap.insert(4);
+    minHeap.insert(5);
+    minHeap.insert(8);
+    minHeap.insert(6);
+    minHeap.insert(7);
+    minHeap.insert(9);
+    minHeap.insert(10);
+
+    std::cout << "Min Heap:" << std::endl;
+    minHeap.printHeap();
+
+    std::cout << "Minimum value: " << minHeap.getMin() << std::endl;
+
+    minHeap.removeMin();
+    std::cout << "After removing min:" << std::endl;
+    minHeap.printHeap();
+
+    return 0;
+}
+```
+
+Heaps are powerful data structures used to maintain a priority queue. They ensure that the highest (or lowest) priority element is always accessible in constant time. By understanding and implementing heaps, you can efficiently manage priority data.
