@@ -709,3 +709,218 @@ int main() {
 }
 
 ```
+**2. Directed Graphs**
+
+**Example:**
+
+```plaintext
+A → B
+↓
+C → D
+```
+
+**Explanation:**
+
+- Vertices: A, B, C, D
+- Edges: (A->B), (A->C), (C->D)
+
+**Example using adjacency list:**
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+using namespace std;
+
+class DirectedGraph {
+public:
+    void addEdge(const string& u, const string& v) {
+        graph[u].push_back(v);
+    }
+
+    void printGraph() {
+        for (const auto& node : graph) {
+            cout << node.first << " -> ";
+            for (const auto& neighbor : node.second) {
+                cout << neighbor << " ";
+            }
+            cout << std::endl;
+        }
+    }
+
+private:
+    unordered_map<string, vector<string>> graph;
+};
+
+int main() {
+    DirectedGraph dg;
+    dg.addEdge("A", "B");
+    dg.addEdge("A", "C");
+    dg.addEdge("C", "D");
+
+    cout << "Directed Graph:\n";
+    dg.printGraph();
+    return 0;
+}
+
+```
+
+
+## 3. Weighted Graphs
+
+**Example:**
+
+```plaintext
+     4
+A -------- B
+|        / |
+|       /  |
+5      1   3
+|     /    |
+|    /     |
+C -------- D
+     2
+```
+
+**Explanation:**
+- Vertices: A, B, C, D
+- Edges with weights: (A-B, 4), (A-C, 5), (B-D, 3), (B-C, 1), (C-D, 2)
+
+**Example using adjacency list:**
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+#include <utility> // for pair
+using namespace std;
+
+class WeightedGraph {
+public:
+    void addEdge(const string& u, const string& v, int weight) {
+        graph[u].emplace_back(v, weight);
+        graph[v].emplace_back(u, weight);
+    }
+
+    void printGraph() {
+        for (const auto& node : graph) {
+            cout << node.first << " -> ";
+            for (const auto& neighbor : node.second) {
+                cout << neighbor.first << " (weight " << neighbor.second << ") ";
+            }
+            cout << endl;
+        }
+    }
+
+private:
+    unordered_map<std::string, vector<std::pair<string, int>>> graph;
+};
+
+int main() {
+    WeightedGraph wg;
+    wg.addEdge("A", "B", 4);
+    wg.addEdge("A", "C", 5);
+    wg.addEdge("B", "D", 3);
+    wg.addEdge("B", "C", 1);
+    wg.addEdge("C", "D", 2);
+
+    cout << "Weighted Graph:\n";
+    wg.printGraph();
+    return 0;
+}
+
+```
+
+## 4. Cyclic vs. Acyclic Graphs
+
+**Cyclic Graph Example:**
+
+```plaintext
+A → B → C
+↑     ↓
+← ← D
+```
+
+**Explanation:**
+- This graph contains a cycle (A->B->C->D->A).
+
+
+**Acyclic Graph Example:**
+
+```plaintext
+A → B → C
+↓
+D
+```
+
+**Explanation:**
+
+- This graph does not contain any cycles.
+
+**Example for Detecting Cycles:**
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+#include <algorithm> // for fill
+
+class GraphCycle {
+public:
+    GraphCycle(int vertices) : V(vertices) {}
+
+    void addEdge(int u, int v) {
+        graph[u].push_back(v);
+    }
+
+    bool isCyclic() {
+        vector<bool> visited(V, false);
+        vector<bool> recStack(V, false);
+
+        for (int node = 0; node < V; ++node) {
+            if (!visited[node] && isCyclicUtil(node, visited, recStack)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+private:
+    int V;
+    unordered_map<int, std::vector<int>> graph;
+
+    bool isCyclicUtil(int v, vector<bool>& visited, vector<bool>& recStack) {
+        if (!visited[v]) {
+            visited[v] = true;
+            recStack[v] = true;
+
+            for (int neighbor : graph[v]) {
+                if (!visited[neighbor] && isCyclicUtil(neighbor, visited, recStack)) {
+                    return true;
+                } else if (recStack[neighbor]) {
+                    return true;
+                }
+            }
+        }
+        recStack[v] = false;
+        return false;
+    }
+};
+
+int main() {
+    GraphCycle gc(4);
+    gc.addEdge(0, 1);
+    gc.addEdge(1, 2);
+    gc.addEdge(2, 0);
+    gc.addEdge(2, 3);
+
+    if (gc.isCyclic()) {
+        cout << "Graph has a cycle\n";
+    } else {
+        cout << "Graph has no cycle\n";
+    }
+
+    return 0;
+}
+
+```
