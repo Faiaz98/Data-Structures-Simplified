@@ -646,3 +646,66 @@ Imagine a map of cities connected by roads. Each city is a node, and each road c
 
 - Vertices (Nodes): The points in a graph.
 - Edges: The connections between the vertices.
+- Directed vs. Undirected Graphs: In a directed graph, edges have a direction (like a one-way street). In an undirected graph, edges have no direction (like a two-way street).
+- Weighted vs Unweighted Graphs: In a weighted graph, edges have weight (e.g., distance or cost). In an unweighted graph, all edges are considered equal.
+- Adjacency List: A way to represent a graph where each vertex has a list of the vertices it is connected to.
+- Adjacency Matrix: A way to represent a graph using a 2D array.
+
+## Types of Graphs:
+
+**1. Undirected Graphs**
+
+**Example**
+
+```plaintext
+A -- B
+|    |
+C -- D
+```
+**Explanation:**
+
+- Vertices: A, B, C, D
+- Edges: (A-B), (A, C), (B-D), (C-D)
+
+Code Example using Adjacency List:
+
+```cpp
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+using namespace std;
+
+class Graph {
+public:
+    void addEdge(const string& u, const string& v) {
+        graph[u].push_back(v);
+        graph[v].push_back(u);
+    }
+
+    void printGraph() {
+        for (const auto& node : graph) {
+            cout << node.first << " -> ";
+            for (const auto& neighbor : node.second) {
+                cout << neighbor << " ";
+            }
+            cout << endl;
+        }
+    }
+
+private:
+    unordered_map<string, vector<string>> graph;
+};
+
+int main() {
+    Graph g;
+    g.addEdge("A", "B");
+    g.addEdge("A", "C");
+    g.addEdge("B", "D");
+    g.addEdge("C", "D");
+
+    cout << "Undirected Graph:\n";
+    g.printGraph();
+    return 0;
+}
+
+```
