@@ -924,3 +924,12 @@ int main() {
 }
 
 ```
+
+
+
+## Heaps Simplified:
+
+Imagine a binary tree where the highest (or lowest) priority element is always the root. This structure is known as a heap.
+
+## Key Points:
+
